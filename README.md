@@ -36,4 +36,8 @@ After training the DINO model for 11 epochs, each checkpoint is saved to Google 
     Average Recall (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.677
     Average Recall (AR) @[ IoU=0.50:0.95 | area=large | maxDets=100 ] = 0.753
 
-    
+The model was then setup to show the outputs on few images as shown below.
+
+![1](https://github.com/user-attachments/assets/faf60ad2-c2e2-4055-9ac3-e6846fed9167)
+![2](https://github.com/user-attachments/assets/3be6183e-e4a6-483f-9bfc-bb7daaeea1ed)
+
