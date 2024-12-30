@@ -1,6 +1,12 @@
 The smaller version of the IIT Delhi dataset on pedestrians contains 200 images, which have been annotated in COCO format, with the corresponding annotations present in a JSON file.
 
-First, the dataset is imported into Google Colab after being uploaded to Google Drive. The dataset is then visualized with bounding box annotations for a few images. The dataset is split into training and validation sets in a ratio of 80:20, or 160 images for the training set and 40 images for the validation set. The images are chosen randomly to be assigned to either the training or validation set, and their corresponding annotation JSON files are created. The entire training and validation sets are saved in the format required by the DINO model.
+First, the dataset is imported into Google Colab after being uploaded to Google Drive. The dataset is then visualized with bounding box annotations for a few images. The dataset is split into training and validation sets in a ratio of 80:20, or 160 images for the training set and 40 images for the validation set. The images are chosen randomly to be assigned to either the training or validation set, and their corresponding annotation JSON files are created. The entire training and validation sets are saved in the format required by the DINO model as shown below.
+    COCODIR/
+      ├── train2017/
+      ├── val2017/
+      └── annotations/
+      	├── instances_train2017.json
+      	└── instances_val2017.json
 
 Next, the DINO repository is cloned to Google Drive, along with a saved checkpoint, which will be used to train the model.
 
