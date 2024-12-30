@@ -1,13 +1,13 @@
-The smaller version of the IIT Delhi dataset on pedestrians contains 200 images, which have been annotated in COCO format, with the corresponding annotations present in a JSON file.
+The smaller version of the IIT Delhi dataset on pedestrians contains 200 images, which have been annotated in COCO format, with the corresponding annotations present in a JSON file. This has been used to evaluate, train and test the DINO model.
 
-First, the dataset is imported into Google Colab after being uploaded to Google Drive. The dataset is then visualized with bounding box annotations for a few images. The dataset is split into training and validation sets in a ratio of 80:20, or 160 images for the training set and 40 images for the validation set. The images are chosen randomly to be assigned to either the training or validation set, and their corresponding annotation JSON files are created. The entire training and validation sets are saved in the format required by the DINO model as shown below.
+First, the dataset is imported into Google Colab after being uploaded to Google Drive. The dataset is then visualized with bounding box annotations for a few images. The dataset is split into training and validation sets in a ratio of 80:20, or 160 images for the training set and 40 images for the validation set. The images are chosen randomly to be assigned to either the training or validation set, and their corresponding annotation JSON files are created. Randomization is done to ensure a fair and unbiased starting point for training, preventing patterns in data order from influencing the model's learning process. The entire training and validation sets are saved in the format required by the DINO model as shown below.
    
-   COCODIR/
-  ├── train2017/
-  ├── val2017/
-  └── annotations/
-      ├── instances_train2017.json
-      └── instances_val2017.json
+      COCODIR/
+     ├── train2017/
+     ├── val2017/
+     └── annotations/
+         ├── instances_train2017.json
+         └── instances_val2017.json
 
 
 Next, the DINO repository is cloned to Google Drive, along with a saved checkpoint, which will be used to train the model.
@@ -44,8 +44,10 @@ After training the DINO model for 11 epochs, each checkpoint is saved to Google 
     Average Recall (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.677
     Average Recall (AR) @[ IoU=0.50:0.95 | area=large | maxDets=100 ] = 0.753
 
-The model was then setup to show the outputs on few images as shown below.
+The model was then setup to infer the outputs on few images as shown below.
 
 ![1](https://github.com/user-attachments/assets/faf60ad2-c2e2-4055-9ac3-e6846fed9167)
 ![2](https://github.com/user-attachments/assets/3be6183e-e4a6-483f-9bfc-bb7daaeea1ed)
 
+
+The models has been stored here: https://drive.google.com/drive/folders/1S37jkh9BY6_CaRha6RDvBdg7mG6bHTQs?usp=sharing
